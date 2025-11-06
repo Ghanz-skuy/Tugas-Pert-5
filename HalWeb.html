@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masukkan Data Mahasigma</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      background: white;
+      padding: 15px;
+      width: 400px;
+      margin: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 3px;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+    }
+
+    .gender-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .gender-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 150px;
+    }
+
+    .hobi-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .hobi-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 200px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 3px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    details {
+      width: 90%;
+      margin: 20px auto;
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Input Data Mahasigma</h1>
+
+  <form>
+    <label for="nim">NIM</label>
+    <input type="text" id="nim" name="nim" required>
+
+    <label for="nama">Nama</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label>Jenis Kelamin</label>
+    <div class="gender-group">
+      <div class="gender-option">
+        <label for="pria">Pria</label>
+        <input type="radio" id="pria" name="gender" value="Pria">
+      </div>
+      <div class="gender-option">
+        <label for="wanita">Wanita</label>
+        <input type="radio" id="wanita" name="gender" value="Wanita">
+      </div>
+    </div>
+
+    <label for="tempat">Tempat Lahir</label>
+    <select id="tempat" name="tempat">
+      <option value="Tabanan">Tabanan</option>
+      <option value="Denpasar">Denpasar</option>
+      <option value="Singaraja">Singaraja</option>
+      <option value="Lombok">Lombok</option>
+      <option value="Jakarta">Jakarta</option>
+    </select>
+
+    <label for="tgl">Tanggal Lahir</label>
+    <input type="date" id="tgl" name="tgl">
+
+    <label for="alamat">Alamat</label>
+    <textarea id="alamat" name="alamat" rows="3"></textarea>
+
+    <label for="nohp">No HP</label>
+    <input type="tel" id="nohp" name="nohp" placeholder="08xxxxxxxxxx">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="example@email.com">
+
+    <label>Hobi</label>
+    <div class="hobi-group">
+      <div class="hobi-option">
+        <label for="olahraga">Olahraga</label>
+        <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">
+      </div>
+      <div class="hobi-option">
+        <label for="menari">Menari</label>
+        <input type="checkbox" id="menari" name="hobi" value="Menari">
+      </div>
+      <div class="hobi-option">
+        <label for="melukis">Melukis</label>
+        <input type="checkbox" id="melukis" name="hobi" value="Melukis">
+      </div>
+      <div class="hobi-option">
+        <label for="tidur">Tidur</label>
+        <input type="checkbox" id="tidur" name="hobi" value="Tidur">
+      </div>
+      <div class="hobi-option">
+        <label for="memasak">Memasak</label>
+        <input type="checkbox" id="memasak" name="hobi" value="Memasak">
+      </div>
+    </div>
+
+    <button type="submit">Kirim</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <details>
+    <summary><b>Lihat Contoh Hasil Input</b></summary>
+    <table>
+      <tr>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Gender</th>
+        <th>Tempat Lahir</th>
+        <th>Tanggal Lahir</th>
+        <th>Alamat</th>
+        <th>No HP</th>
+        <th>Email</th>
+        <th>Hobi</th>
+      </tr>
+      <tr>
+        <td>230101001</td>
+        <td>Putu Ghana</td>
+        <td>Pria</td>
+        <td>Tabanan</td>
+        <td>2005-02-16</td>
+        <td>Jl. Mawar No. 12</td>
+        <td>081234567890</td>
+        <td>ghana@email.com</td>
+        <td>Olahraga, Menari</td>
+      </tr>
+    </table>
+  </details>
+
+</body>
+</html>
